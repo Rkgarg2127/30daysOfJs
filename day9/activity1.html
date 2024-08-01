@@ -1,0 +1,38 @@
+<!-- Activity 1: Selecting and manipulating elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day9</title>
+    <!-- Some styling to make changes more prominent -->
+    <style>
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Creating an element to change text using id -->
+    <div id="text-content-change">Click button to change content</div>
+    <!-- Creating an element to change background color using class -->
+    <div class="bg-color-changer">Click button to change background</div>
+    <!-- Button will execute the function -->
+    <button onclick="change()">Click me</button>
+
+    <script>
+        let textContentChange=document.querySelector("#text-content-change");
+        let bgColorChange=document.querySelector(".bg-color-changer");
+
+        function change(){
+            bgColorChange.style.background ="#777777";
+            textContentChange.innerHTML="You Clicked the button"
+        }
+    </script>
+</body>
+</html>

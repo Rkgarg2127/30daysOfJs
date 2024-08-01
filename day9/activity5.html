@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity2 day9</title>
+    <style>
+        .border{
+            border: 4px solid red;
+        }
+    </style>
+</head>
+<body>
+    <p>click button to change content</p>
+    <!-- Button has click event listener -->
+    <button >Click me</button>
+    
+    <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>pineApple</li>
+        <li>watermelon</li>
+        <!-- border will be addded-->
+    </ul>
+
+
+    <script>
+        function updateContent(){
+            document.querySelector("p").innerText="This is updated text";;
+        }
+
+        function addBorder(){
+            document.querySelector("ul").classList.add("border");
+        }
+        document.querySelector("button").addEventListener('click',updateContent);
+        document.querySelector("ul").addEventListener('mouseover',addBorder);
+        document.querySelector("ul").addEventListener('mouseout',()=>{
+            document.querySelector("ul").classList.remove("border");
+        });
+    </script>
+</body>
+</html>

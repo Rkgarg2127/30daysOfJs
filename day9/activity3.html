@@ -1,0 +1,36 @@
+<!-- Activity 3: Deletiing Elements
+Task 5: Select a html elemnt and remove it from DOM
+Task 4: Remove last element of Html document -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity3 day9</title>
+</head>
+<body>
+    <p>Intially only all of content is present</p>
+
+    <!-- tis para will be deleted-->
+     <p id="deletePara">Click button to delete this para and watermelon in this list</p>
+    
+    <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>pineApple</li>
+        <li>watermelon</li>
+        <!-- last list element will be deleted -->
+    </ul>
+
+    <!-- Button will execute the function -->
+    <button onclick="change()">Click me</button>
+
+    <script>
+        function change(){
+            document.querySelector("#deletePara").parentNode.removeChild(deletePara);
+            document.querySelector("ul").lastElementChild.remove();
+        }
+    </script>
+</body>
+</html>
